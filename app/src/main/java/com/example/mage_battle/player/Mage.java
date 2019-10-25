@@ -31,6 +31,10 @@ public class Mage {
         this.spellInventory.remove(spellIndex); //delete spell
     }
 
+    public void AddRune(Rune newRune){
+        runeInventory.add(newRune);
+    }
+
     public void CraftSpell(){
 
     }
