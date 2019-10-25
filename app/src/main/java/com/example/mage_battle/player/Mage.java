@@ -7,10 +7,10 @@ import java.util.ArrayList;
 public class Mage {
     public ArrayList<Rune> runeInventory;
     public ArrayList<Spell> spellInventory;
-    public int runeMastery[];
+    public int[] runeMastery;
     public int hp, barrier;
 
-    public Mage(int health, int runeMageMastery[]){
+    public Mage(int health, int[] runeMageMastery){
         this.spellInventory = new ArrayList<>();
         this.runeInventory = new ArrayList<>();
         this.hp = health;
