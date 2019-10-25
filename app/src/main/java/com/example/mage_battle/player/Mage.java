@@ -32,7 +32,7 @@ public class Mage {
     }
 
     public void AddRune(Rune newRune){
-        runeInventory.add(newRune);
+        this.runeInventory.add(newRune);
     }
 
     public void CraftSpell(){
