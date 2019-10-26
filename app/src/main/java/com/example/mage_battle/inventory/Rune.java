@@ -1,15 +1,30 @@
 package com.example.mage_battle.inventory;
 
-import android.media.Image;
+import com.example.mage_battle.R;
+import android.widget.ImageView;
+
 
 public class Rune {
     public enum RuneType {
         Fire, Earth, Water, Air
     }
     public RuneType runeType;
-    public Image runeImage;
+    public ImageView runeImage;
+    public int imWidth, imHeight;
 
     public Rune(RuneType type){
         this.runeType = type;
+        if (type == RuneType.Fire){
+            this.runeImage.setImageResource(R.drawable.FireRune);
+        }
+        if (type == RuneType.Air){
+            this.runeImage.setImageResource(R.drawable.AirRune);
+        }
+        if (type == RuneType.Earth){
+            this.runeImage.setImageResource(R.drawable.EarthRune);
+        }
+        if (type == RuneType.Water){
+            this.runeImage.setImageResource(R.drawable.WaterRune);
+        }
     }
 }

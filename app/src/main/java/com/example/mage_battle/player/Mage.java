@@ -1,5 +1,7 @@
 package com.example.mage_battle.player;
 
+import android.widget.ImageView;
+import com.example.mage_battle.R;
 import com.example.mage_battle.inventory.Rune;
 import com.example.mage_battle.inventory.Spell;
 import java.util.ArrayList;
@@ -9,6 +11,7 @@ public class Mage {
     public ArrayList<Spell> spellInventory;
     public int[] runeMastery;
     public int hp, barrier;
+    public ImageView mageImage;
 
     public Mage(int health, int[] runeMageMastery){
         this.spellInventory = new ArrayList<>();
@@ -16,6 +19,7 @@ public class Mage {
         this.hp = health;
         this.barrier = 0;
         this.runeMastery = runeMageMastery;
+        this.mageImage.setImageResource(R.drawable.WomanPerson);
     }
 
     public void UseSpell(Mage target, int spellIndex) {
