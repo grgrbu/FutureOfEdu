@@ -28,7 +28,7 @@ public class Mage {
         if (target.barrier == 1 && this.spellInventory.get(spellIndex).damage > 0) {
             target.barrier = 0;
         } else {
-            target.hp -= this.spellInventory.get(spellIndex).damage * (1 / (1 + this.defense));
+            target.hp -= this.spellInventory.get(spellIndex).damage * (1 / (1 + this.defense * 0.25));
         }
         target.hp += this.spellInventory.get(spellIndex).heal;
         if (this.spellInventory.get(spellIndex).barrier == 1) {
