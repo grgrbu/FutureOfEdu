@@ -30,7 +30,7 @@ public class Mage {
         } else {
             target.hp -= this.spellInventory.get(spellIndex).damage * (1 / (1 + this.defense * 0.25));
         }
-        target.hp += this.spellInventory.get(spellIndex).heal;
+        this.hp += this.spellInventory.get(spellIndex).heal;
         if (this.spellInventory.get(spellIndex).barrier == 1) {
             target.barrier = 1;
         }
