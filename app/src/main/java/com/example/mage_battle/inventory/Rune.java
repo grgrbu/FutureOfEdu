@@ -41,5 +41,6 @@ public class Rune {
         if (this.runeType == RuneType.Earth){
             return "Earth";
         }
+        return "This should not happen";
     }
 }

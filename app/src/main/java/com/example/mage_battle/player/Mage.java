@@ -10,7 +10,7 @@ public class Mage {
     public ArrayList<Rune> runeInventory;
     public ArrayList<Spell> spellInventory;
     public int[] runeMastery;
-    public int hp, barrier;
+    public int hp, barrier, defense;
     public ImageView mageImage;
 
     public Mage(int health, int[] runeMageMastery){
@@ -18,15 +18,17 @@ public class Mage {
         this.runeInventory = new ArrayList<>();
         this.hp = health;
         this.barrier = 0;
+        this.defense = 0;
         this.runeMastery = runeMageMastery;
         this.mageImage.setImageResource(R.drawable.WomanPerson);
     }
 
     public void UseSpell(Mage target, int spellIndex) {
+        target.defense += this.spellInventory.get(spellIndex).defense;
         if (target.barrier == 1 && this.spellInventory.get(spellIndex).damage > 0) {
             target.barrier = 0;
         } else {
-            target.hp -= this.spellInventory.get(spellIndex).damage;
+            target.hp -= this.spellInventory.get(spellIndex).damage * (1 / (1 + this.defense));
         }
         target.hp += this.spellInventory.get(spellIndex).heal;
         if (this.spellInventory.get(spellIndex).barrier == 1) {
