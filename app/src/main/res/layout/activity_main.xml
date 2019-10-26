@@ -12,29 +12,12 @@
     android:background="#444444">
 
 
-    <Button
-        android:id="@+id/button0"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@layout/main_button"
-        android:text="⚙️"
-        android:textColor="#FFFFFF"
-        android:textSize="35dp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="1dp" />
-
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@layout/main_button"
-        android:text="❌"
-        android:textColor="#FFFFFF"
-        android:textSize="35dp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="329dp"
-        tools:layout_editor_absoluteY="1dp" />
+    <include
+        layout="@layout/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
