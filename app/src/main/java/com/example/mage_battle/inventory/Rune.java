@@ -27,4 +27,19 @@ public class Rune {
             this.runeImage.setImageResource(R.drawable.WaterRune);
         }
     }
+
+    public String ToString(){
+        if (this.runeType == RuneType.Fire){
+            return "Fire";
+        }
+        if (this.runeType == RuneType.Air){
+            return "Air";
+        }
+        if (this.runeType == RuneType.Water){
+            return "Water";
+        }
+        if (this.runeType == RuneType.Earth){
+            return "Earth";
+        }
+    }
 }
