@@ -9,7 +9,7 @@ public class Rune {
     public RuneType runeType;
     public Image runeImage;
 
-    public Rune(RuneType type){
+    public Rune(RuneType type) {
         this.runeType = type;
     }
 }
