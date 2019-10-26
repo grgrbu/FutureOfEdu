@@ -15,16 +15,16 @@ public class Rune {
     public Rune(RuneType type){
         this.runeType = type;
         if (type == RuneType.Fire){
-            this.runeImage.setImageResource(R.drawable.FireRune);
+            this.runeImage.setImageResource(R.drawable.firerune);
         }
         if (type == RuneType.Air){
-            this.runeImage.setImageResource(R.drawable.AirRune);
+            this.runeImage.setImageResource(R.drawable.airrune);
         }
         if (type == RuneType.Earth){
-            this.runeImage.setImageResource(R.drawable.EarthRune);
+            this.runeImage.setImageResource(R.drawable.earthrune);
         }
         if (type == RuneType.Water){
-            this.runeImage.setImageResource(R.drawable.WaterRune);
+            this.runeImage.setImageResource(R.drawable.waterrune);
         }
     }
 

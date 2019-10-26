@@ -20,7 +20,7 @@ public class Mage {
         this.barrier = 0;
         this.defense = 0;
         this.runeMastery = runeMageMastery;
-        this.mageImage.setImageResource(R.drawable.WomanPerson);
+        this.mageImage.setImageResource(R.drawable.womanperson);
     }
 
     public void UseSpell(Mage target, int spellIndex) {
