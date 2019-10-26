@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Mage_Battle</string>
+    <string name="profile">Profile</string>
 </resources>

@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#444444"
     android:paddingLeft="16dp"
     android:paddingTop="16dp"
     android:paddingRight="16dp"
     android:paddingBottom="16dp"
-    tools:context=".MainActivity"
-    android:background="#444444">
+    tools:context=".MainActivity">
 
 
     <TextView
@@ -21,7 +21,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
-        android:text="Mage Battle"
+        android:text="Calculate 2 x 2"
         android:textColor="#a11213"
         android:textSize="40dp"
         app:layout_constraintBottom_toTopOf="@+id/button_math"
@@ -29,66 +29,69 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button_math"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="24dp"
-        android:background="#da1113"
-        android:text="PRACTISE"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/button_english"
+    <TextView
+        android:id="@+id/userAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+
+        android:background="#555555"
+        android:paddingLeft="3dp"
+        android:paddingTop="3dp"
+        android:paddingRight="3dp"
+        android:paddingBottom="3dp"
+        android:text="Your answer is: \n 5"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/correctAnwer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+
+        android:background="#555555"
+        android:paddingLeft="3dp"
+        android:paddingTop="3dp"
+        android:paddingRight="3dp"
+        android:paddingBottom="3dp"
+        android:text="Correct answer is: \n 4"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/button_english"
+        android:id="@+id/toMenu"
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="45dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="84dp"
         android:background="#da1113"
-        android:text="CHALLENGE"
-        app:layout_constraintBottom_toTopOf="@+id/button_attentiveness"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_math" />
-
-    <Button
-        android:id="@+id/button_attentiveness"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="24dp"
-        android:background="#da1113"
-        android:text="DUEL"
-        app:layout_constraintBottom_toTopOf="@+id/button_history"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_english" />
-
-    <Button
-        android:id="@+id/button_history"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="24dp"
-        android:background="#a51211"
-        android:text="@string/profile"
+        android:text="To Menu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_attentiveness" />
+        app:layout_constraintTop_toBottomOf="@+id/nextQuestion" />
+
+    <Button
+        android:id="@+id/nextQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="45dp"
+        android:background="#da1113"
+        android:text="Next Question"
+        app:layout_constraintBottom_toTopOf="@+id/toMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correctAnwer" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
